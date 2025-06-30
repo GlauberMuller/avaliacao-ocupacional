@@ -83,10 +83,23 @@ function showResults() {
   quiz.classList.add("hidden");
   results.classList.remove("hidden");
   let total = responses.reduce((acc, val) => acc + (val ?? 0), 0);
-  // Pontuação máxima: 3 pontos por pergunta
   summary.innerHTML = `Pontuação total: <strong>${total}</strong> de ${questions.length * 3}`;
-}
 
-restartBtn.addEventListener("click", () => {
-  location.reload();
-});
+  // Enviar para backend
+  fetch('http://localhost:3000/salvar', { // altere para o endereço do backend se for deploy!
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ respostas: responses })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.ok) {
+      summary.innerHTML += "<br><span style='color:green'>Respostas registradas e enviadas com sucesso!</span>";
+    } else {
+      summary.innerHTML += "<br><span style='color:red'>Erro ao enviar respostas: " + (data.error || "Tente novamente mais tarde") + "</span>";
+    }
+  })
+  .catch(() => {
+    summary.innerHTML += "<br><span style='color:red'>Erro de conexão com o servidor.</span>";
+  });
+}
