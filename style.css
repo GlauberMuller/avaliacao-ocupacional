@@ -1,0 +1,89 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e9f0f7;
+  color: #222;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  color: #3180d7;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: #3180d7;
+  color: white;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #195e9d;
+}
+
+.hidden {
+  display: none;
+}
+
+#questionBox {
+  background: #f7fbff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e1e8ef;
+}
+
+#optionsList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+#optionsList li {
+  margin-bottom: 0.8rem;
+}
+
+.controls {
+  text-align: center;
+}
+
+#results {
+  background: #f7fbff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e1e8ef;
+}
+
+#summary {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #195e9d;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0 0 0;
+  color: #7d97b1;
+  font-size: 0.95rem;
+}
