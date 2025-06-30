@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NR01 - Avaliação Ocupacional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>NR01 - Avaliação Ocupacional</h1>
+      <p class="subtitle">Saúde, Segurança e Inclusão no Trabalho</p>
+      <button id="startBtn">Iniciar Avaliação</button>
+    </header>
+
+    <main id="quiz" class="hidden">
+      <div id="questionBox">
+        <h2 id="questionText"></h2>
+        <ul id="optionsList"></ul>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">Anterior</button>
+        <button id="nextBtn">Próxima</button>
+      </div>
+    </main>
+
+    <section id="results" class="hidden">
+      <h2>Resultados da Avaliação</h2>
+      <div id="summary"></div>
+      <button id="restartBtn">Refazer Avaliação</button>
+    </section>
+  </div>
+
+  <footer>
+    <p>Desenvolvido para promover ambientes de trabalho mais saudáveis e inclusivos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
